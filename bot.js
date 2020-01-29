@@ -7,7 +7,7 @@ class MCQuery extends ActivityHandler {
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (context, next) => {
             const message = context.activity.text
-            if (!message.includes('/mc-query')) { return next() }
+            if (!message.includes('/query')) { return next() }
 
             const params = message.split(' ').splice(1)
             const requestIP = params[0] || 'ohs.us.to'
